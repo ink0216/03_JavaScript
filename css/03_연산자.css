@@ -1,0 +1,22 @@
+.calculator{
+    width: 300px;
+    height: 150px;
+    border: 3px solid black;
+    margin : auto;
+    padding: 25px;
+}
+.btn-row{
+    display: flex;  /* 다닥다닥 붙음 */
+    margin-top: 10px;
+
+}
+.btn-row>button{
+    height: 30px;
+    margin: 0 5px;
+    flex-grow: 1; /* 중심축 방향으로의 팽창 */
+    font-size: 20px;
+    font-weight: bold;
+}
+#calcResult{
+    color: red;
+}
