@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 04 _ 연산자 2 </title>
+</head>
+<body>
+    <h1>비교 연산자</h1>
+    <!-- ( ==, !=, >, <, >=, <= )   -->
+    <!--  ! : 부정(반대, not) -->
+    <pre>
+        -좌변과 우변을 비교해서 
+        같다, 같지 않다, 초과, 미만, 이상, 이하 비교해서
+        맞을 경우 true, 아닐 경우 false를 반환하는 연산자
+        (연산 결과로 boolean('불리언')(논리 값)을 반환한다)
+    
+        -복합 기호(이상, 이하)를 사용할 때 등호(=)는 무조건 오른쪽에 작성!!
+
+    </pre>
+    <hr>
+    <h3>입력된 두 수가 같은지 확인하기</h3>
+
+    <div>
+        <label for="compareValue1">1번</label> 
+        <!-- 인풋과 연결하려면 for 속성에 인풋의 아이디 적기 -->
+        <input type="text" id="compareValue1"> <br>
+
+        <label for="compareValue2">2번</label> 
+        <!-- 인풋과 연결하려면 for 속성에 인풋의 아이디 적기 -->
+        <input type="text" id="compareValue2">  <br>
+
+        <button id="btn1" onclick="compareFn1()">비교</button>
+        <span id="result1"></span> <!-- 여기에 T of F 결과 나오게 할거다 -->
+
+    </div>
+
+    <hr>
+
+    <h3>좌변에 입력한 수가 우변에 입력한 수보다 큰지(초과인지) 확인하기</h3>
+
+    <div>
+        <label for="compareValue3">3번</label> 
+        <!-- 인풋과 연결하려면 for 속성에 인풋의 아이디 적기 -->
+        <input type="text" id="compareValue3"> <br>
+
+        <label for="compareValue4">4번</label> 
+        <!-- 인풋과 연결하려면 for 속성에 인풋의 아이디 적기 -->
+        <input type="text" id="compareValue4">  <br>
+
+        <button onclick="compareFn2()">비교</button>
+        <span id="result2"></span> <!-- 여기에 T of F 결과 나오게 할거다 -->
+
+    </div>
+    <hr>
+    <h3>배수가 맞는 지 확인하기</h3>
+    <div>
+        <label for="input3_1">첫 번째 입력 :</label>
+        <input type="number" id="input3_1"> <br>
+
+        <label for="input3_2">두 번째 입력 :</label>
+        <input type="number" id="input3_2">
+        <br>
+        <button onclick="checkFn3()">배수 확인</button>
+        <h3 id="result3"></h3>
+    </div>
+    <hr>
+    <h1>복합 대입 연산자 (+=, -=, *=, /=, %=)</h1>
+    <pre>
+    - 기존 변수에 저장되어있는 값에 
+    새롭게 대입 되는 값의 산술 연산 결과를 다시 대입(결과값으로 변수 값이 바뀜)
+
+    -증감 연산자는 1씩만 증가/ 감소하는데
+    복합 대입 연산자는 원하는 만큼씩 증가/ 감소 가능
+    ex) 
+    let temp = 10;
+    // temp = 5; 하면 덮어씌워짐
+    temp += 5;  == temp = temp + 5;
+        (누적(더하기 누적), 차감(빼기 누적), 제곱(나누기 누적) 등등 효과)
+    </pre>
+    <hr>
+    <h3>현재 값 : <span id="result4">0</span></h3> <!-- 기본값 = 0 -->
+    <input id="input4" type="number" min="0" max="100"> <!-- 0~100 사이 숫자만 넣음 -->
+    <button onclick="minus4()">차감</button>
+
+    <button onclick="plus4()">누적</button>
+
+    <hr>
+    <h1>논리 연산자(&&, ||, !)</h1>
+    <pre>
+        < 연산자 ( A && B ) >
+        - A, B 모두 true일 경우에만 결과로 true를 반환하는 연산자 
+        (나머지 경우들은 모두 false로 반환)
+        - 문장에서 ~와, 그리고(이고), 이면서(면서), 부터, 까지, 사이
+            라는 글귀가 있으면 AND 연산을 수행하면 된다
+
+        - ex) 104는 100 이상의 수 이면서 , 짝수인가?
+        - ex) 50은 70 이하의 수 이면서, 4의 배수인가?
+        - ex) 3은 1부터 10 사이의 수가 맞는가?
+        - 둘다 만족이 돼야 맞는 것이 됨
+
+
+        < 연산자( A || B )>
+        - A, B 모두 false일 경우에만 결과로 false를 반환하는 연산자 
+            (나머지 경우는 모두 true)
+        - A, B 중 하나라도 true라면 true 반환
+        - 문장에서 또는, ~거나(~이거나)
+            라는 글귀가 있으면 OR 연산을 수행하면 된다
+        
+        - ex) 4는 10을 초과하거나, 짝수인가?
+        - ex) 50은 0 이하 또는 40 이상인가?
+        - 둘 중 하나라도 만족하면 맞는 것이 됨
+
+        <논리 부정(NOT) 연산자(!)>
+        -논리 값을 반대로 바꾸는 연산자는
+
+        - ex) let test= true;
+                !test // == !true == false로 바뀜
+
+    </pre>
+    
+    <button onclick="checkFn5()">확인하기</button>
+    <hr>
+    <hr>
+    <hr>
+    <h1>삼항 연산자( 조건식 ? true인 경우 : false인 경우 )</h1>
+    특수 기호 두개 기준으로 세 개의 입력 항 존재
+    이 위의 연산은 이항 연산자였음
+    !true : 단항연산자
+    <pre>
+        - 조건식의 결과에 따라서 수행되는 코드가 다른 연산자 
+        - 조건식의 결과가 true이면 true가 실행되고
+        - 조건식의 결과가 false이면 false가 실행됨
+        -> 조건식은 항상 결과가 true 또는 false가 반환되도록 작성해야 한다
+        예시: 조건식= 1 + 2가 3 이 맞냐?
+    </pre>
+
+    <h3>로그인하기</h3>
+    <pre>
+        - 입력된 ID가 'member01',
+            입력된 PW가 'pass01!'가 맞을 경우
+            alert("로그인 성공!");
+        - ID 또는 PW 중 하나라도 일치하지 않으면
+        alert("아이디 또는 비밀번호가 일치하지 않습니다");
+    </pre>
+    <div>
+        ID : <input type="text" id="inputId"> <br>
+        PW : <input type="password" id="inputPw">
+        <button onclick="login()">로그인</button>
+    </div>
+    
+
+
+
+
+
+
+
+
+    <script src="../js/04_연산자2.js"></script>
+</body>
+</html>

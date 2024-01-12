@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 05 _ 조건문 </title>
+    <link rel="stylesheet" href="../css/05_조건문.css">
+</head>
+<body>
+    <h1>조건문(condition)</h1>
+    <pre>
+        프로그래밍 코드가 해석되는 순서를 
+        
+        제어하는 제어문(건너뛰는 등, 좌->우, 상->하 방향으로 코드 해석하는 일반적 흐름을 깨는 것들)의 한 종류로
+
+        작성된 조건식에 따라서 수행되는 코드를 변경하는 구문
+    </pre>
+    <hr>
+
+    <h3> if(만약에 ~하다면) 문</h3>
+    <pre>
+        <code>
+            if(조건식){
+                조건식이 true인 경우 실행할 코드;
+            }
+        </code>
+        *조건식: 결과가 true, false인 식(연산)
+        *조건문: 조건식의 결과에 따라 실행을 제어하는 구문(if, switch)
+    </pre>
+
+    <h4>입력받은 수가 양수인지 아닌지 검사</h4>
+    <input type="number" id="input1">
+    <button onclick="check1()">양수인지 검사</button>
+    <hr>
+
+    <h3>if( ~ 라면 ~해라) - else( ~ 아니라면 ~해라)문</h3>
+    <pre>
+        <code>
+            if(조건식){
+                조건식이 true인 경우 수행할 코드 적기
+            }
+            else{
+                
+                조건식이 false인 경우 수행할 코드 적기
+                //아닌 경우의 조건식은 쓸 필요 없음
+            }
+        </code>
+        * else 구문에는 조건식을 작성하는 ()가 없다!!!!! 
+    </pre>
+    <h4> 0 ~ 100 사이 난수(랜덤인 수)를 발생시켜 홀/짝 판별하기 </h4>
+    <button onclick="check2()">확인하기</button>
+
+
+
+
+
+    <script src="../js/05_조건문.js"></script>
+</body>
+</html>
