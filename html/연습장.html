@@ -1,26 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>연습장</title>
-</head>
-<body>
-    <div>
-        <div>
-            <label for="blank1"> 첫 번째 값 : </label>
-            <input type="number" id="blank1">
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+    </head>
+    <body>
+        <div class="container flex-container">
+            <div class="restM">
+                잔액 : <span id="balance">10000</span>원
+            </div>
+            <div class="howM">
+                <label for="amount">금액 : </label>
+                <input type="number" id="amount">원
+            </div>
+            <div class="btn">
+                
+                <button onclick="withdrawal()">출금</button>
+            </div>
         </div>
-        <div>
-            <label for="blank2"> 두 번째 값 : </label>
-            <input type="number" id="blank2">
-        </div>
-        <div>
-            <label for="blank3"> 세 번째 값 : </label>
-            <input type="number" id="blank3">
-        </div>
-        <button onclick="threeFn()"></button>
-    </div>
-    <script src="../js/연습장.js"></script>
-</body>
-</html>
+        <script>
+    function withdrawal(){
+                        
+                        const password = prompt("비밀번호를 입력하세요.");
+                        if(password == null){
+                            alert("취소");
+                        } else{ // 비밀번호를 쓰긴 쓴 경우
+                            
+                        if(password == '1234'){
+                            if(input1 > balance1){
+                                const amount1 = Number(amount.value);
+                                alert("출금 금액이 잔액보다 클 수 없습니다.");
+                            }
+                            else{
+                                const amount1 = Number(amount.value);
+                                balance1 -= amount1;
+                                balance.innerText = balance1;
+                        alert(`${amount1}원이 출금 되었습니다. 남은 잔액 : ${balance1}원`);
+                            }
+
+            } else{
+                            alert("비밀번호가 일치하지 않습니다.");
+
+                        }
+                    }
+
+                        
+                    }
+
+
+        </script>
+    </body>
+    </html>
