@@ -55,3 +55,110 @@ function check5(){
         if(row ==3) break;
     }
 }
+// 업다운 게임 만들기
+// 프롬프트에 1~100 사이 숫자 입력
+// 얼마 만에 끝날지 모르니까 while문 써야 함
+function startGame(){
+    //난수 발생 : 콘솔창 Math.random()
+    //발생하는 난수 범위 : 0 <= Math.random() < 1
+    // Math.floor(Math.random() *101) : 0 <= Math.random() < 101
+    //1~100 사이 난수
+    const randomNumber = Math.floor(Math.random()*100) +1;
+
+    //숫자를 입력한 횟수(정답 시도 횟수)를 셀 count 0으로 초기화 
+    let count = 0;
+
+    //prompt에 작성되어질 문자열을 따로 저장해둠
+    let str = "1~100 사이 숫자를 입력해 주세요";
+    while(true){
+        //true : 무한반복시킴
+
+        // str이 프롬프트에 뜨고 프롬프트에 입력한 값이 input에 저장됨
+        //-> 확인: 입력한 값
+        //-> 취소: null
+        let input = prompt(str); 
+
+        //취소를 누른 경우 -> "게임 포기" 알림을 띄운 뒤 반복 종료(게임 종료)
+        if(input == null){
+            alert("게임 포기");
+            break; //무한히 돌던 while문 밖으로 나감
+        }
+
+        //확인을 누른 경우 -> 프롬프트에 작성된 숫자는 문자열이므로 숫자로 변환 후 
+        input = Number(input);
+
+        //NaN(Nat a Number) : 숫자가 아니다
+        //input에 abc쓰고 숫자로 변환하려고 하면 NaN이 뜸
+        //input에는 입력한 숫자 또는 NaN이 대입 될것이다
+        //NaN이면 잘못 입력한 것이니까 NaN인 경우에 다시 입력하게 하기
+        // if(input==NaN) 이렇게 하면 안됨
+        //isNaN(변수/값) : 변수/값이 NaN이면 true, 아니면 false를 반환하는 함수
+        if(isNaN(input)){
+            alert("숫자만 입력해 주세요.");
+            continue; //다시 위의 while 구문으로 돌아가서 값을 다시 입력받게 하기
+        }
+        //여기까지 왔으면 정상적인 숫자 입력한 경우임
+        //여기서부터 정답 시도 횟수를 1 증가시킬 것임
+        count++;
+        if(input==randomNumber){
+            str=`정답!! ${input} / count : ${count}`;
+            alert(str);
+            break;
+        }
+        
+    
+        //입력한 값이 난수와 같다면 
+        //"정답!! (입력한 값) /count : 정답 시도 횟수 출력"
+        //알림창 출력 후 반복 종료
+
+    
+        //입력한 값이 난수보다 큰 경우
+        //"[DOWN] / count : 정답 시도 횟수 출력"
+        //문자열을 str에 대입 후 다음 반복으로 이동
+        if(input>randomNumber){
+            str=`[DOWN] / count : ${count}`;
+            alert(str);
+            continue;
+        }
+
+        //입력한 값이 난수보다 작은 경우
+        //"[UP] / count : 정답 시도 횟수 출력"
+        //문자열을 str에 대입 후 다음 반복으로 이동
+        else{
+            str=`[UP] / count : ${count}`;
+            alert(str);
+            continue;
+        }
+    }
+    }
+    // 선생님 코드
+    // while(true){ // 무한 반복
+    
+    //     let input = prompt(str);
+    
+    //     if(input == null){
+    //       alert("게임 포기");
+    //       break;
+    //     }
+    
+    //     input = Number(input);
+    
+    //     if(isNaN(input)){
+    //       alert("숫자만 입력해 주세요");
+    //       continue;
+    //     }
+    
+    //     count++;
+    
+    //     if(input == randomNumber){
+    //       alert(`정답!! (${input}) / count : ${count}`);
+    //       break;
+    //     }
+    
+    //     if(input > randomNumber) str = `[DOWN]  / count : ${count}`;
+    //     else str = `[UP]  / count : ${count}`;
+    //   }
+    
+    
+
+    

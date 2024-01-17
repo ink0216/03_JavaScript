@@ -20,9 +20,9 @@ function check1(){
 
 /* if-else 0 -> 홀/짝 판별하기 */
 function check2(){
-    //난수 발생 : 콘솔창 Math.randon()
-    //발생하는 난수 범위 : 0 <= Math.randon() < 1
-    // Math.floor(Math.random() *101) : 0 <= Math.randon() < 101
+    //난수 발생 : 콘솔창 Math.random()
+    //발생하는 난수 범위 : 0 <= Math.random() < 1
+    // Math.floor(Math.random() *101) : 0 <= Math.random() < 101
     // 0~100 범위의 난수
     const randomNumber = Math.floor(Math.random() *101);
     if(randomNumber % 2 != 0){
