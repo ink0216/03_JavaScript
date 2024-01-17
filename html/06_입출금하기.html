@@ -45,7 +45,7 @@
     <button onclick="test()">연습용 출금 버튼</button>
     <hr> 
     <h2>내가 해보기! </h2>
-    <div class="container flex-container">
+    <div class="container flex-container-col">
         <div class="restM">
             잔액 : <span id="balance">10000</span>원
         </div>
@@ -53,9 +53,9 @@
             <label for="amount">금액 : </label>
             <input type="number" id="amount">원
         </div>
-        <div class="btn">
-            <button onclick="deposit()">입금</button>
-            <button onclick="withdrawal()">출금</button>
+        <div class="btn-box">
+            <button class="btn" onclick="deposit()">입금</button>
+            <button class="btn" onclick="withdrawal()">출금</button>
         </div>
     </div>
 

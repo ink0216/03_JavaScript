@@ -8,8 +8,9 @@
     height: 60%;
     border: 3px solid black;
     margin: auto;
+    background-color: #b0b1ef;
 }
-.flex-container{
+.flex-container-col{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -20,12 +21,35 @@
     border : 2px solid black;
     margin: 80px;
     font-size: 100px;
+    color: rgb(59, 46, 234);
+    height: 30%;
+    width: 70%;
 
+}
+#amount{
+    font-size: 50px;
+    background-color: white;
+    
 }
 
 .howM{
     border : 2px solid black;
     margin: 80px;
     font-size: 100px;
+    height: 30%;
+    width: 70%;
+}
+.btn{   
+    display: inline-block;
+    width: 40%;
+    height: 100;
+
+
+}
+.btn-box{
+    display: inline-block;
+    height: 30%;
+    width: 70%;
+    
 }
 
