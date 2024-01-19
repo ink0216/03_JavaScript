@@ -13,7 +13,7 @@
     <h1>DOM(Document Object Model)</h1>
 
     <pre>
-    웹 문서(HTML)의 모든 요소를 객체 형식으로 표현한 것
+    웹 문서(HTML)의 모든 요소(전체)를 객체 형식으로 표현한 것
     (HTML 요소 == JS에서 객체라고 부름)
 
     -> 문서 내 특정 요소에 접근 가능
@@ -45,7 +45,7 @@
         -> 태그가 일치하는 모든 요소를 얻어와 배열 형태로 반환  
 
 
-    5. CSS 선택자로 접근하기
+    5. CSS 선택자로 접근하기 (최근에 가장 많이 사용)
         
         1) document.querySelector("CSS 선택자");
             -> 선택자가 선택한 요소 중 첫 번째 요소를 반환
@@ -63,6 +63,92 @@
     <div class="cls-test"></div>
     <div class="cls-test"></div>
     <div class="cls-test"></div>
+    <hr>
+    <h3>input에 입력된 숫자를 모두 얻어와 합계 구하기-class이용</h3>
+    <input type="'number'" class="cls-test2"> <br>
+    <input type="'number'" class="cls-test2"> <br>
+    <input type="'number'" class="cls-test2"> <br>
+    <input type="'number'" class="cls-test2"> <br>
+    <input type="'number'" class="cls-test2"> <br>
+    <button onclick="classTest2()">합계 구하기</button>
+    <hr>
+    <h3>태그명으로 요소 접근하기</h3>
+    <ul>
+        <li>#ef476f</li>
+        <li>#ffd166</li>
+        <li>#06d6a0</li>
+        <li>#118ab2</li>
+        <li>#073b4c</li>
+    </ul>
+    li 아이템을 다 찾아서 그 안의 내용으로 배경색을 바꾸겠다 <br>
+    <button onclick="tagNameTest()">배경색 변경</button>
+    <hr>
+    <h3>name으로 요소 접근하기</h3>
+    <pre>
+        name 속성은 input 태그 또는 input 관련 태그들만 
+        기본 속성으로 가지고 있다.
+        form태그와 사용됐을 때 제출될 이름이 필요하기 때문에
+
+        name-div에 내가 체크한 것과 선택한 수 나오도록 할거다
+    </pre>
+    
+    <table>
+    <tr>
+        <td>
+        <input type="checkbox" name="hobby" id="game" value="게임">
+        <label for="game">게임</label>
+        </td>
+        <td>
+        <input type="checkbox" name="hobby" id="music" value="음악감상">
+        <label for="music">음악감상</label>
+        </td>
+        <td>
+        <input type="checkbox" name="hobby" id="movie" value="영화감상">
+        <label for="movie">영화감상</label>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+        <input type="checkbox" name="hobby" id="coding" value="코딩">
+        <label for="coding">코딩</label>
+        </td>
+        <td>
+        <input type="checkbox" name="hobby" id="exercise" value="운동">
+        <label for="exercise">운동</label>
+        </td>
+        <td>
+        <input type="checkbox" name="hobby" id="book" value="독서">
+        <label for="book">독서</label>
+        </td>
+    </tr>
+    </table>
+    
+    <div id="name-div"></div>
+    <button onclick="nameTest()">선택된 취미만 출력하기</button>
+    <hr>
+    <h3>CSS 선택자로 요소 접근하기</h3>
+    <div target-div="css-div"><!-- 없는 속성 줘도 됨 -->
+        <div>test1</div>
+        <div>test2</div>
+    </div>
+    <button onclick="cssTest()">CSS선택자로 요소 접근하기</button>
+    <hr>
+    <h3>카카오톡 모양의 채팅 화면 만들기</h3>
+    
+    <div class="chatting">
+    <div id="chatting-bg">
+        <p><span>입력되는 채팅 출력</span></p>
+        <p><span>입력되는 채팅 출력</span></p>
+        <p><span>입력되는 채팅 출력</span></p>
+    </div>
+
+    <div id="chatting-input">
+        <input type="text" id="user-input">
+        <button onclick="readValue()">입력</button>
+    </div>
+    </div>
+
     
     <script src="../js/11_요소접근방법.js"></script>
 </body>

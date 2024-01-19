@@ -1,0 +1,30 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 800px;
+    margin: 50px auto;
+}
+.key-box{
+    width: 100%;
+    display: flex; /* 키가 옆으로 나열됨 */
+    justify-content: space-evenly;
+    border: 3px solid black;
+}
+.key{
+    width: 100px;
+    height: 100px;
+    border: 2px solid blue;
+    background-color: lightgreen;
+    margin: 10px 0;
+    border-radius : 10px;
+
+    font-size : 50px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none; /* 클릭시 파랑블럭 안생기게 */
+}

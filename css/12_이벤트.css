@@ -1,0 +1,28 @@
+#test2{
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    background-color: purple;
+}
+
+.container3{
+    width: 200px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction : column;
+    padding: 5px;
+}
+#box3{
+    height: 200px;
+    box-sizing: border-box;
+    border : 1px solid black;
+    transition-duration : 0.5s; 
+    /* css변경 시간 */
+
+
+}
+.container3 *{
+    
+    /* container3의 모든 후손들한테 */
+    margin-bottom : 5px;
+}
