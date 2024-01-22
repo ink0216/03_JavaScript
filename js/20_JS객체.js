@@ -179,3 +179,29 @@ btn3.addEventListener("click", ()=>{
         // 반복문(for문) 이용해서 객체 배열에 저장된 모든 요소의 introduce() 메서드 호출
 
 });
+/* JS에서 제공하는 JSON 내장 객체 */
+const btn4 = document.querySelector("#btn4");
+btn4.addEventListener("click", ()=>{
+    //JS 객체 생성
+    const obj = {"id":"test01" , "pw" : "1234", "number" : 9999}; 
+
+    //JS 객체 -> JSON 문자열로 변환
+    const str = JSON.stringify(obj);
+    console.log("obj :", obj);
+    console.log("str :", str);
+
+    //JSON 문자열 -> JS 객체로 변환
+    const str2 = '{"memberId":"user01","memberPw":"pass01","age":20}';
+    const obj2 = JSON.parse(str2);
+
+    console.log("str2 :", str2);
+    console.log("obj2 :", obj2);
+
+    //서버 데이터 비동기 요청
+
+    fetch('https://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getMinuDustFrcstDspth?serviceKey=fC0CJR9Lmwp3VfoLcND3XVFDW7FKGuTMECDT6TZD3aE7q4XUVL6PYscpePWfKNMwh0p6ZUt%2FmOm5xGbckoRGCQ%3D%3D&returnType=JSON&numOfRows=100&pageNo=1&searchDate=2024-01-22&InformCode=PM10')
+    .then(response =>response.json())
+    .then(result =>console.log(result.response.body.items[0].informGrade));
+    //fetch : 내려받다, 가져오다
+    //이 주소에 있는 데이터를 가져와서 JSON->JS로 바꿔서 result에 담아서 콘솔로 출력
+});
