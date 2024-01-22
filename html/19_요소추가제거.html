@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>10_요소추가제거</title>
+<link rel="stylesheet" href="../css/19_요소추가제거.css">
+</head>
+
+<body>
+
+
+<div>
+    <h1>input에 작성된 값 모두 더하기</h1>
+
+    <pre>
+    - 추가 버튼 클릭 시 화면에 input 요소가 추가됨
+    
+    - 계산 버튼을 클릭 했을 때
+    모든 input 요소에 작성된 값의 합을 alert()로 출력
+
+
+
+    [도전!]
+    - 추가 버튼 클릭 시 input 요소 옆에 x 버튼 만들기
+
+    - x 버튼 클릭 시 
+        해당 줄의 input, x 버튼 삭제하기
+
+
+    hint.
+        요소 삭제 방법  :  요소.remove()
+    
+
+    </pre>
+</div>
+
+<div>
+
+    <button id="add">추가</button>
+    <button id="calc">계산</button>
+
+    <div class="container">
+    <div class="row">
+        <input type="number" class="input-number">
+    </div>
+
+    <div class="row">
+        <input type="number" class="input-number">
+    </div>
+
+    </div>
+    <!-- JS 만들 요소 견본  -->
+    <!-- <div class="row">
+    <input type="number" class="input-number">
+    <span class="remove-row">&times;</span>
+    </div> -->
+
+</div>
+<pre>
+    1. 로딩, 이벤트 발생 등 시점에 따라서 선택되는 요소가 달라진다
+        ->추가된 것을 전역변수로 선언하면 첫 로딩 시에는 없으니까 인식되지 않음
+    2. x 버튼처럼 새롭게 만들어지는 요소(동적 추가 요소)에 이벤트를 추가하는 방법
+        -> 없던 게 생겼다 = 움직임
+        -> 만들어지는 시점에 이벤트 추가 코드를 작성해야 한다
+        -> x버튼은 새로 생기는 부분에 선언해야지, 전역변수는 새로고침 된 즉시 읽는데,
+            새로고침 된 직후에는 새로 만들어지는 요소는 존재하지 않으므로
+            전역변수로 선언하면 안된다! 
+</pre>
+
+
+<script src="../js/19_요소추가제거.js"></script>
+</body>
+
+</html>

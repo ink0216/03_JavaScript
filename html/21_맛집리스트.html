@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 21 _ 맛집 리스트 </title>
+    <link rel="stylesheet" href="../css/21_맛집리스트.css">
+</head>
+<body>
+    <header>
+        가게명 : <input type="text" id="resName"> <br>
+        주소 : <input type="text" id="resAddress"> <br>
+        메뉴 : <input type="text" id="resMenu" size="100"> <br>
+        <!-- text 타입의 input은 size 설정 가능(길이) -->
+
+        <!-- Restaurant 객체를 생성해서 객체 배열에 추가 -->
+        <!-- 추가 누르면 바로 눈에 안보이고 안보이는 곳에 저장해놨다가 조회 시에 눈에 보이도록 -->
+        <button id="addBtn">추가</button>
+        <!-- 객체 배열에 저장된 모든 요소를 화면에 출력 -->
+        <button id="selectBtn">조회</button>
+    </header>
+    <main>
+        <ol id="printList">
+            <li>식당명 / 메뉴 / 주소</li>
+        </ol>
+    </main>
+
+    <script src="../js/21_맛집리스트.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 20 _ JS 객체 </title>
+    <link rel="stylesheet" href="../css/20_JS객체.css">
+</head>
+<body>
+    <h1>자바스크립트 객체</h1>
+    <pre>
+        - 객체(Object) : 속성과 기능으로 이루어진 것 
+                        ->속성 == 필드 (값을 저장하는 변수)
+                        ->기능 == 메서드 (객체에 작성된 함수)
+                        ->배열은 여러 변수를 index 번호로 구분해 저장(0,1,2번)
+                        ->객체는 여러 변수를 이름으로 구분해 저장(이름, 나이, 주소 등)
+        - {}(블록)내에 Key : Value가 모여 있는 형태
+            ->Key == 변수명/메서드명 
+                ->Key값은 변수명처럼 중복되면 안된다! 
+            ->Value == 값, 함수
+                ->Value값은 중복돼도 된다
+        * K:V 가 모여있는 형식 == Map(지도)
+                ex) KH 정보교육원 : 서울시 중구 남대문로 120 
+
+        * JS 객체 작성법 *
+        {K:V , K:V , K:V , ...} 원하는 만큼 작성 가능! 
+
+        [JS 객체 생성 방법]
+        1. {} : JS 객체 리터럴 표기법을 이용한 생성
+                -> 리터럴(literal) - 값(Value)대신에 사용
+                                    - 각 자료형 마다 리터럴(값) 표기법이 별도로 존재
+                                        ex) 문자열(string) -> "", ''
+                                        ex) 숫자(number) -> 1, 2.34 , +50, -50
+                                        ex) 배열(array) -> []
+                                        ex) 객체(object) -> {}
+                                        ex) 논리값(boolean) -> true, false
+        2. 생성자 함수 : 생성자 + new 생성자() 를 이용한 생성
+    </pre>
+    <button id="btn1">{} 객체 생성 + 다루기</button>
+    <button id="btn2">method(메서드)</button>
+    <hr>
+    <h3>생성자(Constructor) 함수</h3>
+    <pre>
+        * 생성자(==생성자 함수)란?
+            -객체 생성 즉시 수행되는 기능(함수)
+            -아기가 태어나면 우는 기능 처럼
+            -특정한 모양의 객체가 다수 필요한 경우
+                이를 만들기 위한 코드의 중복을 최소화하는 것
+                + 재사용성 증가(코드 한 번 써놓고 불러서 쓰기)
+        
+        * new 연산자
+            -가상 공간(메모리)에 객체를 새롭게 생성(할당)
+
+        * 생성자 함수를 이용한 객체 생성 방법
+        ->const 객체명 = new 생성자함수(); 
+        //함수가 새로 만들어져서 객체에 대입됨
+    </pre>
+    <button id="btn3">생성자 함수</button>
+
+
+
+    <script src="../js/20_JS객체.js"></script>
+</body>
+</html>
