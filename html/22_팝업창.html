@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>팝업창 전용 HTML</title>
+</head>
+<body>
+    <h3>팝업창 입니다</h3>
+    <h4>부모로부터 읽어온 값 : <span id="result"></span></h4>
+    부모로 전달할 값 : <input type="text" id="childInput">
+    <button id="send">값을 보내고 팝업창 닫기</button>
+    <script>
+        const result = document.querySelector("#result");
+        //#result에
+        //부모창 #readValue에 작성된 값을 얻어와
+        //출력하기
+
+        /* opener : 팝업창을 연 창( == 부모창) */
+        const readValue = opener.document.querySelector("#readValue").value;
+        //연 창 안의 문서에서 #readValue를 찾아서 값만 얻어와 대입
+        result.textContent = readValue;
+
+        //#send 버튼 클릭 시
+        //#childInput 값을 얻어와
+        //부모창 #writeValue의 값으로 대입한 후
+        //팝업창 닫기
+        const send = document.querySelector("#send");
+        const childInput = document.querySelector("#childInput");
+        send.addEventListener("click", ()=>{
+            opener.document.querySelector("#writeValue").value = childInput.value;
+            window.close(); //창 닫기
+        });
+    </script>
+</body>
+</html>

@@ -50,3 +50,43 @@ stop3.addEventListener("click", ()=>{
     window.clearInterval(currInterval); //인터벌을 클리어하겠다
     start3.disabled = false; //다시 활성화 시킴(비활성화하지 않음)
 });
+/* 팝업창 */
+/* 팝업창 열기1 */
+const openPopup1 = document.querySelector("#openPopup1");
+openPopup1.addEventListener("click", ()=>{
+    window.open("23_스톱워치.html"); //새 탭에서 스톱워치.html을 열어라(팝업창X)
+
+    // == <a href="23_스톱워치.html" target="_blank">스톱워치</a>  (in HTML)
+});
+/* 팝업창 열기2(진짜 팝업으로 열기) */
+const openPopup2 = document.querySelector("#openPopup2");
+openPopup2.addEventListener("click", ()=>{
+    window.open("23_스톱워치.html", "_blank", "popup"); //비어있는 팝업창에 스톱워치.html을 열어라
+});
+/* 팝업창 열기3(팝업창 + 옵션) */
+const openPopup3 = document.querySelector("#openPopup3");
+openPopup3.addEventListener("click", ()=>{
+    let options = []; //비어있는 배열
+    options.push("width=400");
+    options.push("height=600");
+
+    /* 팝업창 띄우는 위치 지정 */
+    //단, 메인 모니터에서만 적용 됨
+    options.push("left=500"); //팝업이 왼쪽 화면으로부터 얼만큼 떨어진 위치에 나왔으면 좋겠는지
+    options.push("top=100"); //팝업이 윗쪽 화면으로부터 얼만큼 떨어진 위치에 나왔으면 좋겠는지
+    
+    /* 배열명.toString() : "요소, 요소, 요소" */
+    // -> 배열 내 요소를 ,를 구분자로 한 하나의 문자열로 변환
+    // [1,2,3].toString() : 배열을 문자열로 바꿔라, 객체도 앞에 쓰면 객체도 문자열로 바꿀 수 있음
+    window.open("23_스톱워치.html", "_blank", options.toString()); 
+});
+/* 팝업창(자식)이 부모창의 값을 읽고/쓰기 */
+const openPopup4 = document.querySelector("#openPopup4");
+openPopup4.addEventListener("click", ()=>{
+    const options = [];
+    options.push("width=600");
+    options.push("height=600");
+    options.push("left=500");
+    options.push("top=100");
+    window.open("22_팝업창.html", "_blank", options.toString());
+});

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 24 _ 기본 이벤트 제거 </title>
+</head>
+<body>
+    <h1>기본 이벤트 제거</h1>
+    <pre>
+        a태그(anchor태그)에는 기본적으로 이벤트가 걸려있음
+
+        a태그의 기본 이벤트 : 클릭 시 href 속성에 작성된 url로 이동
+
+        form태그의 기본 이벤트 : form 태그 내부에서 submit 동작 발생 시 
+                                    action 속성에 작성된 url로
+                                    form 태그 내부 input값들을 제출
+    근데 이걸 막아버릴 수 있다
+    </pre>
+    <h3>a 태그 기본 이벤트 제거</h3>
+    <a href="23_스톱워치.html" id="move">스톱워치로 이동</a>
+    <hr>
+    <h3>form 태그 기본 이벤트 제거</h3>
+    <!-- action : 제출할 주소(url)를 적는 곳(form안의 데이터를 어디로 전달할 것인지) -->
+
+    <!-- 방법 1 : e.preventDefault() 사용 -->
+    <form action="24_result.html" id="form" name="inputForm">
+        <!-- form태그에 name쓰면 특별한 게 있음!  -->
+        <!-- document.inputForm 쓰면 바로 접근 가능 -->
+        <!-- form 태그 name속성 작성 시
+        document.form태그name으로 요소 접근이 가능하다-->
+        <!-- form 태그 제출 시 입력 값들이 ?name=value&name=value 형식으로 제출된다
+                            (method="GET"인 경우) -->
+        입력 1 : <input type="text" id="input1" name="i1"> <br>
+        입력 2 : <input type="text" id="input2" name="i2"> <br>
+        입력 3 : <input type="text" id="input3" name="i3"> <br>
+        입력 4 : <input type="text" id="input4" name="i4"> <br>
+
+        //버튼의 type 속성 : submit(기본값), reset, button
+        <button>값 제출</button>
+        
+    </form>
+    <hr>
+
+    <!-- 방법 2 : onsubmit = "return false"를 이용한 방법 -->
+    <!-- 제출되었을 때 false를 리턴하면 제출 못하게 막히게 됨-->
+    <!-- 제출되었을 때 true를 리턴하면 제출됨-->
+    <form action="24_result.html" onsubmit="return onsubmitTest()">
+    제출 O <input type="radio" name="submitRadio" value="O">
+    제출 X <input type="radio" name="submitRadio" value="X">
+    <br>
+    <button>제출하기</button>
+    </form>
+    <!-- 방법 3 : 일반 버튼 클릭 시 form 태그 제출/제출막기 -->
+    <form action="24_result.html" name="inputForm3">
+        입력 : <input type="text" id="inputTest">
+        <button type="button" id="btn3">제출</button>
+        <!-- submit 버튼 아니고 button이라서 눌러도 제출 안됨 -->
+    </form>
+
+
+
+    <script src="../js/24_기본이벤트제거.js"></script>
+</body>
+</html>
