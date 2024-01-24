@@ -18,80 +18,63 @@
     </pre>
     <hr>
     <hr>
-    <button id="newLotto">로또판 생성</button>
-    <div id="container">
-        <div class="row">
-            <div id="circle">1</div>
-            <div id="circle">2</div>
-            <div id="circle">3</div>
-            <div id="circle">4</div>
-            <div id="circle">5</div>
-        </div>
-
-        <div class="row">
-            <div id="circle">6</div>
-            <div id="circle">7</div>
-            <div id="circle">8</div>
-            <div id="circle">9</div>
-            <div id="circle">10</div>
-        </div>
-
-        <div id="row">
-            <div id="circle">11</div>
-            <div id="circle">12</div>
-            <div id="circle">13</div>
-            <div id="circle">14</div>
-            <div id="circle">15</div>
-        </div>
-
-        <div id="row">
-            <div id="circle">16</div>
-            <div id="circle">17</div>
-            <div id="circle">18</div>
-            <div id="circle">19</div>
-            <div id="circle">20</div>
-        </div>
-
-        <div id="row">
-            <div id="circle">21</div>
-            <div id="circle">22</div>
-            <div id="circle">23</div>
-            <div id="circle">24</div>
-            <div id="circle">25</div>
-        </div>
-
-        <div id="row">
-            <div id="circle">26</div>
-            <div id="circle">27</div>
-            <div id="circle">28</div>
-            <div id="circle">29</div>
-            <div id="circle">30</div>
-        </div>
-
-        <div id="row">
-            <div id="circle">31</div>
-            <div id="circle">32</div>
-            <div id="circle">33</div>
-            <div id="circle">34</div>
-            <div id="circle">35</div>
-        </div>
-
-        <div id="row">
-            <div id="circle">36</div>
-            <div id="circle">37</div>
-            <div id="circle">38</div>
-            <div id="circle">39</div>
-            <div id="circle">40</div>
-        </div>
-
-        <div id="row">
-            <div id="circle">41</div>
-            <div id="circle">42</div>
-            <div id="circle">43</div>
-            <div id="circle">44</div>
-            <div id="circle">45</div>
-        </div>
+    <button id="createBtn">로또판 생성</button>
+    <div id="lottoBoard">
+        <!-- <div class="number">1</div>
+        <div class="number">2</div>
+        <div class="number">3</div>
+        <div class="number">4</div>
+        <div class="number">5</div>
+        <div class="number">6</div>
+        <div class="number">7</div>
+        <div class="number">8</div>
+        <div class="number">9</div>
+        <div class="number">10</div>
+        <div class="number">11</div>
+        <div class="number">12</div>
+        <div class="number">13</div>
+        <div class="number">14</div>
+        <div class="number">15</div>
+        <div class="number">16</div>
+        <div class="number">17</div>
+        <div class="number">18</div>
+        <div class="number">19</div>
+        <div class="number">20</div>
+        <div class="number">21</div>
+        <div class="number">22</div>
+        <div class="number">23</div>
+        <div class="number">24</div>
+        <div class="number">25</div>
+        <div class="number">26</div>
+        <div class="number">27</div>
+        <div class="number">28</div>
+        <div class="number">29</div>
+        <div class="number">30</div>
+        <div class="number">31</div>
+        <div class="number">32</div>
+        <div class="number">33</div>
+        <div class="number">34</div>
+        <div class="number">35</div>
+        <div class="number">36</div>
+        <div class="number">37</div>
+        <div class="number">38</div>
+        <div class="number">39</div>
+        <div class="number">40</div>
+        <div class="number">41</div>
+        <div class="number">42</div>
+        <div class="number">43</div>
+        <div class="number">44</div>
+        <div class="number">45</div> -->
     </div>
+    <pre>
+    배치 방법 두가지
+    - float : left로 하면 요소를 띄워서 왼쪽정렬 -> 부모 요소 넘어가게 생기면 자동으로 넘어감 
+    - display : flex , flex-wrap : wrap, align-content : flex-start(교차축 시작지점으로 정렬) 
+        -> 부모 요소를 넘어가게 생기면 자동으로 넘어감 
+
+    선택완료버튼 만들어서 선택한 것 목록 오른쪽에 띄우고 로또판 초기화
+    ->완료버튼 누르면 새로 목록 기록되게 만들수도 있다! 
+</pre>
     <script src="../js/27_로또판생성하기.js"></script>
 </body>
 </html>

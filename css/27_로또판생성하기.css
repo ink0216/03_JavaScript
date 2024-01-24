@@ -1,3 +1,27 @@
-#circle{
+#lottoBoard{
+    border : 1px solid black;
+    width: 250px;
+    height: 450px;
+    display : flex;
+    flex-wrap : wrap; 
+    align-content: flex-start;  /* 위로 다닥다닥 붙음 */
+
+}
+.number{
+    box-sizing: border-box;
+    width: 30px;
+    margin : 10px;
+    /* 한 요소가 상하좌우 크기 50px씩 가짐 */
+    height: 30px;
     border: 1px solid black;
+    border-radius : 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items : center;
+    cursor : pointer; /* 손가락 모양 */
+    user-select : none;/* 블럭 생기는 것 방지 */
+}
+.active{
+    background-color: orange;
 }
