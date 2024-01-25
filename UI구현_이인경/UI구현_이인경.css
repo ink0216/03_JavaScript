@@ -1,0 +1,105 @@
+*{
+    user-select : none;
+}
+.container{
+    width: 500px;
+    height: auto;
+    display: flex;
+    flex-direction : row;
+    flex-wrap : wrap;
+    border : 1px solid black;
+    margin : auto;
+}
+.left{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items : center;
+    border-right : 1px solid black;
+}
+.right{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction : column;
+    align-items: center;
+}
+.numberBox{
+    display: flex;
+    flex-wrap : wrap;
+    justify-content: space-around;
+    width: 100%;
+    border-top : 1px solid black;
+}
+.number{
+    width: 80px;
+    height: 80px;
+    font-size : 30px;
+    font-weight : bold;
+    margin : 10px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.number:hover{
+    border-radius : 50%;
+    background-color: rgb(208, 207, 207);
+    transition-duration: 0.04s;
+}
+.buttonBox{
+    width: 100%;
+    display : flex;
+    flex-direction : column;
+}
+#addBtn{
+    background-color: white;
+    border : 2px solid green;
+    color : green;
+    border-radius : 30%;
+    margin : 10px 0;
+}
+#addBtn:hover{
+    background-color : green;
+    color : white;
+    cursor: pointer;
+}
+#resetBtn{
+    background-color: white;
+    border : 2px solid grey;
+    color : grey;
+    border-radius : 30%;
+}
+#resetBtn:hover{
+    background-color : grey;
+    color : white;
+    cursor: pointer;
+}
+/* 추가 버튼 클릭 시 */
+.record{
+    width: 100%;
+}
+.recordBox{
+    width: 100%;
+    display : flex;
+    justify-content: space-between;
+    font-size : 20px;
+}
+.result{
+    width: 80%;
+}
+.iconBox{
+    display : flex;
+    flex-direction: row;
+    width: 20%;
+}
+.star{
+    position: relative;
+    display: block;
+    color: black;
+}
+
+
+
+

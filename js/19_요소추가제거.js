@@ -45,7 +45,9 @@ const input = document.createElement("input");
 
   // 내용으로 &times; 추가(innerHTML 사용)
   span.innerHTML = "&times;";
-
+  // &starf;
+  // &star;
+  // &times;
   /* ********************************** */
   // 클릭된 x버튼의 부모 요소를 제거
 
@@ -59,6 +61,10 @@ const input = document.createElement("input");
     // [3] 부모 요소를 제거
     parent.remove();
   });
+
+
+
+  
   /* ********************************** */
 
   // --- 조립 시작.... ---
