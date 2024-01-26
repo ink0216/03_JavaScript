@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 메뉴판 관리 </title>
+    <link rel="stylesheet" href="../css/메뉴판관리.css">
+</head>
+<body>
+    메뉴는 최대 15개까지만 -> "더 이상 메뉴를 추가할 수 없습니다."
+    클릭된 경우 : 적혀있던 글씨(span, cursor pointer , flex-grow :1)(none되고)가 input(block됨)의 글씨로 들어감
+    클릭 잃은 경우 : input에 있던 글씨(none)가 적혀있는 글씨(block)로 들어감
+    addEventListener- blur
+display : block input display : none
+--------------------------------------
+    <img src="../메뉴판관리1.png" alt="">
+    <img src="../메뉴판관리2.png" alt="">
+    <hr>
+    <hr>
+
+
+<div class="container">
+    <header>
+        <div class="resDisplay"><h1>식당명을 입력하세요</h1></div>
+        <input type="text" class="resInput">
+    </header>
+    <main class="main">
+        <ul class="menu-container"></ul>
+    </main>
+    <footer class="footer">
+        <button class="editBtn">수정</button>
+    </footer>
+</div>
+
+
+    <hr>
+    <hr>
+    <!-- <ul class="menu-container"> flex  수정 버튼 누르기 전 
+        <li class="menu"> flex
+            <span class="menu-name">치즈 돈까스</span>
+            <span class="menu-price">12000원</span>
+        </li>
+    </ul>
+
+    <ul class="menu-container"> 수정 버튼 누른 후 
+        <li class="menu">
+            <input type="checkbox" class="menu-check">
+            <input type="text" placeholder="메뉴명" class>
+            <input type="text" placeholder="가격">
+        </li>
+    </ul> -->
+    <script src="../js/메뉴판관리.js"></script>
+</body>
+</html>
